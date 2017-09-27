@@ -700,7 +700,7 @@
               <stringProp name="RegexExtractor.regex">&lt;a href=&quot;/ldu/(.+)&quot;&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default"></stringProp>
-              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
               <stringProp name="Sample.scope">all</stringProp>
               <stringProp name="Scope.variable">REGION_ID</stringProp>
             </RegexExtractor>
@@ -1009,7 +1009,7 @@
               <stringProp name="RegexExtractor.regex">&lt;a href=&quot;/team/(.+)&quot;&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default"></stringProp>
-              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
               <stringProp name="Sample.scope">all</stringProp>
               <stringProp name="Scope.variable">REGION_ID</stringProp>
             </RegexExtractor>
@@ -1318,7 +1318,7 @@
               <stringProp name="RegexExtractor.regex">&lt;a href=&quot;/offender-manager/(.+)&quot;&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default"></stringProp>
-              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
               <stringProp name="Sample.scope">all</stringProp>
               <stringProp name="Scope.variable">REGION_ID</stringProp>
             </RegexExtractor>
