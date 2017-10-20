@@ -11,16 +11,6 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
-        <collectionProp name="DNSCacheManager.servers">
-          <stringProp name="1505998205">127.0.0.1</stringProp>
-        </collectionProp>
-        <stringProp name="TestPlan.comments">Required for DNS RR via localhost dnsmasq</stringProp>
-        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
-        <boolProp name="DNSCacheManager.isCustomResolver">true</boolProp>
-        <collectionProp name="DNSCacheManager.hosts"/>
-      </DNSCacheManager>
-      <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="REGION_ID" elementType="Argument">
