@@ -11,31 +11,6 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="REGION_ID" elementType="Argument">
-            <stringProp name="Argument.name">REGION_ID</stringProp>
-            <stringProp name="Argument.value">${__RandomFromMultipleVars(${__P(regionIds, 3|26|1|19|13|22)})}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="LDU_ID" elementType="Argument">
-            <stringProp name="Argument.name">LDU_ID</stringProp>
-            <stringProp name="Argument.value">${__RandomFromMultipleVars(${__P(lduIds, 60|226|83|509|40|532|675|601|54|638|644|538|246|569|237|498|383|360|260|220|80|68|366|515|74|249|512|535|57|655|506|529|243|684|51|692|541|514|666|73|566|368|534|511|228|85|677|603|62|42|540|254|242|56|683|646|491|248|546|523|377|354|231|371|663|76|222|517|606|59|225|82|251|39|531|649|88|600|53|45|543|537|686|643|245|394|48|71|240|549|526|257|77|223|372|518|664|259|528|516|67|230|376|370|605|250|58|81|536|64|38|87|505|256|648|44|691|442|642|50|542|356|47|70|239|548|525|233|362|373|717|519|565|224|665|84|559|227|608|602|674|508|61|651|41|90|539|645|253|247|497|234|374|65|219|79|520)})}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="TEAM_ID" elementType="Argument">
-            <stringProp name="Argument.name">TEAM_ID</stringProp>
-            <stringProp name="Argument.value">${__RandomFromMultipleVars(${__P(teamIds, 2800|69|2940|95|12|86|2337|58|130|101|50|93|2795|2964|2935|10|133|90|4|125|1387|105|13|254|2876|88|1582|2950|11|103|97|57|1368|137| )})}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="OM_ID" elementType="Argument">
-            <stringProp name="Argument.name">OM_ID</stringProp>
-            <stringProp name="Argument.value">${__RandomFromMultipleVars(${__P(omIds, 46|401|3750|161|6667|146|189|7374|264|229|149|6141|405|6636|6399|2918|70|6971|279|373|2972|3327|2878|5534|147|4533|6454|6657|4456|2973|85|6932|5658|6783|2916|6514|351|340|360|429|283|4004|80|3171|14|243| )})}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
-      </Arguments>
-      <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
@@ -55,6 +30,54 @@
         <boolProp name="CookieManager.clearEachIteration">false</boolProp>
         <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
       </CookieManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="region csv config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${__P(regionCsvPath)}</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">REGION_ID</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="ldu csv config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${__P(lduCsvPath)}</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">LDU_ID</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="team csv config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${__P(teamCsvPath)}</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">TEAM_ID</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="workload owner csv config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${__P(workloadOwnerCsvPath)}</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">OM_ID</stringProp>
+      </CSVDataSet>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
