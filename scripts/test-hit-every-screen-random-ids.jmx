@@ -15,7 +15,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="REGION_ID" elementType="Argument">
             <stringProp name="Argument.name">REGION_ID</stringProp>
-            <stringProp name="Argument.value">${__Random(1, 28)}</stringProp>
+            <stringProp name="Argument.value">${__Random(${__P(minRegionId, 1)}, ${__P(maxRegionId, 10)})}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LDU_ID" elementType="Argument">
